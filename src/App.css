@@ -1,0 +1,66 @@
+.app-shell {
+    min-height: 100vh;
+}
+
+.workspace {
+    min-height: 100vh;
+    margin-left: 248px;
+}
+
+.content {
+    width: min(100%, 1500px);
+    min-height: calc(100vh - 76px);
+    margin: 0 auto;
+    padding: 34px;
+}
+
+.storage-alert {
+    margin: 16px 34px 0;
+    padding: 12px 15px;
+    color: #8c4a12;
+    background: #fff6e8;
+    border: 1px solid #f4d5a5;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.empty-state {
+    padding: 72px 20px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.empty-state h2 {
+    margin: 0 0 8px;
+    color: var(--text);
+}
+
+@media (max-width: 1000px) {
+    .content {
+        padding: 25px 22px;
+    }
+}
+
+@media (max-width: 860px) {
+    .workspace {
+        margin-left: 0;
+    }
+
+    .content {
+        min-height: calc(100vh - 68px);
+    }
+
+    .storage-alert {
+        margin: 12px 20px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .content {
+        padding: 22px 14px;
+    }
+
+    .storage-alert {
+        margin: 10px 14px 0;
+    }
+}

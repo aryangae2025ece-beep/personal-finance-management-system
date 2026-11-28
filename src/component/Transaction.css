@@ -1,0 +1,61 @@
+.transaction {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 0;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+}
+
+.transaction-type-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+}
+
+.transaction-type-icon.income {
+    color: #218c67;
+    background: #e8f7f0;
+}
+
+.transaction-type-icon.expense {
+    color: #d77957;
+    background: #fff1e9;
+}
+
+.transaction-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.transaction-info h4 {
+    overflow: hidden;
+    margin-bottom: 4px;
+    color: #344055;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.transaction-info p {
+    margin: 0;
+    color: #8993a2;
+    font-size: 11px;
+}
+
+.transaction-amount {
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.transaction-amount.income {
+    color: #218c67;
+}
+
+.transaction-amount.expense {
+    color: #4b5668;
+}

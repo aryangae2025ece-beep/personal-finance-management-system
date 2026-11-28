@@ -1,0 +1,150 @@
+.sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 20;
+    width: 248px;
+    display: flex;
+    flex-direction: column;
+    color: #d3d9e8;
+    background: #18243a;
+}
+
+.sidebar-brand {
+    height: 76px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -.5px;
+}
+
+.brand-mark {
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: #5a7af1;
+    border-radius: 10px;
+}
+
+.brand-light {
+    color: #aab8e0;
+    font-weight: 500;
+}
+
+.sidebar-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px 14px;
+}
+
+.sidebar-label {
+    margin: 0 12px 11px;
+    color: #7f8ca6;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.15px;
+}
+
+.demo-label {
+    margin-top: 29px;
+}
+
+.sidebar-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin: 3px 0;
+}
+
+.sidebar-links a,
+.sidebar-settings {
+    min-height: 43px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #aeb8cb;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 550;
+    transition: background .15s ease, color .15s ease;
+}
+
+.sidebar-links a:hover,
+.sidebar-settings:hover {
+    color: white;
+    background: rgba(255,255,255,.07);
+}
+
+.sidebar-links a.active,
+.sidebar-settings.active {
+    color: #fff;
+    background: #344a78;
+}
+
+.sidebar-links a.active svg {
+    color: #a8bbff;
+}
+
+.sidebar-footer {
+    padding: 15px 14px 19px;
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.sidebar-help {
+    margin: 0 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8290a9;
+    font-size: 11px;
+}
+
+.sidebar-settings {
+    min-height: 38px;
+}
+
+.sidebar-close {
+    display: none;
+    margin-left: auto;
+    color: #cbd4e4;
+}
+
+.sidebar-backdrop {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .sidebar {
+        z-index: 42;
+        transform: translateX(-100%);
+        transition: transform .2s ease;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-close {
+        display: grid;
+    }
+
+    .sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 40;
+        display: block;
+        background: rgba(15, 23, 42, .42);
+        border: 0;
+    }
+}
